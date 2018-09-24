@@ -21,7 +21,7 @@ var tinymceOpts = {
                 force_p_newlines : false,
 				verify_html : false,
                 entity_encoding : "named",
-				fontsize_formats: "8px 10px 12px 14px 18px 24px 36px",
+				fontsize_formats: "8px 9px 10px 11px 12px 13px 14px 15px 16px 17px 18px 19px 20px 21px 22px 23px 24px 25px 26px 27px 28px 29px 30px 31px 32px 33px 34px 35px 36px 37px 38px 39px 40px 41px 42px 43px 44px 45px 46px 47px 48px 49px 50px 51px 52px 53px 54px 55px 56px 57px 58px 59px 60px 61px 62px 63px 64px 65px",
                 setup: function(editor) {
                     
                     editor.addButton('heading', {
@@ -309,7 +309,12 @@ var page = {
             connectToSortable: ".tpl-container",
             refreshPositions: true
         });
-        $('.tpl-container').sortable({
+        $('.tpl-container').each(function(){
+            page.sortableElements($(this));
+        });
+    },
+    sortableElements: function($tpl){
+        $tpl.sortable({
             cursor: 'move',
             handle: '',
 			//revert: true,
@@ -364,10 +369,6 @@ var page = {
                 }
             }
         }).disableSelection();
-		
-		
-		
-		
     },
     isElements: function(){
         $('.tpl-container').each(function(){
@@ -591,11 +592,11 @@ var page = {
                     type = 'box-social-share';
                     var masSocialText = ['Share','Tweet','Share','+1'];
                     var masSocialLink = ['http://www.facebook.com/sharer/sharer.php?u=','http://twitter.com/intent/tweet?text=','http://www.linkedin.com/shareArticle?url=','https://plus.google.com/share?url='];
-                    dataAll = '{"containerBackground":"#ffffff", "containerBorderType":"None", "containerBorderWidth":"0", "containerBorderColor":"#ffffff", "btnBackground":"#fafafa", "btnBorderType":"Solid", "btnBorderWidth":"1", "btnBorderColor":"#cccccc", "btnBorderRadius":"5", "fontTypeFace": "Arial", "fontWeight":"None", "fontSize":"12", "color":"#505050", "lineHeight":"None","align": "0", "width":"1","styleIcon":"0", "layout": "1", "contentToShare":"'+contentToShare+'", "shareCustomUrl":"0", "shareLink":"", "shareDesc":""}';
+                    dataAll = '{"containerBackground":"#ffffff", "containerPadding":"0", "containerBorderType":"None", "containerBorderWidth":"0", "containerBorderColor":"#ffffff", "btnBackground":"#fafafa", "btnBorderType":"Solid", "btnBorderWidth":"1", "btnBorderColor":"#cccccc", "btnBorderRadius":"5", "fontTypeFace": "Arial", "fontWeight":"None", "fontSize":"12", "color":"#505050", "lineHeight":"None","align": "0", "width":"1","styleIcon":"0", "layout": "1", "contentToShare":"'+contentToShare+'", "shareCustomUrl":"0", "shareLink":"", "shareDesc":""}';
                     elementDrag = '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ebShareBlock">'+
                                     '<tbody class="ebShareBlockOuter">'+
                                         '<tr>'+
-                                            '<td valign="top" class="ebShareBlockInner" style="padding: 9px;">'+
+                                            '<td valign="top" class="ebShareBlockInner" style="padding: 0px;">'+
                                                 '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ebShareContent">'+
                                                     '<tbody>'+
                                                         '<tr>'+
@@ -784,11 +785,11 @@ var page = {
                     contentToShare = 0;
                     var masSocialText = ['Facebook','Twitter','LinkedIn','Google Plus'];
                     var masSocialLink = ['http://www.facebook.com/','http://www.twitter.com/','http://www.linkedin.com/','http://plus.google.com/'];
-                    dataAll = '{"containerBackground":"#ffffff", "containerBorderType":"None", "containerBorderWidth":"0", "containerBorderColor":"#ffffff", "btnBackground":"#ffffff", "btnBorderType":"None", "btnBorderWidth":"0", "btnBorderColor":"#ffffff", "btnBorderRadius":"5", "fontTypeFace": "Arial", "fontWeight":"None", "fontSize":"12", "color":"#505050", "lineHeight":"None","align": "0", "width":"1","styleIcon":"0", "display":"0", "layout": "2", "contentToShare":"'+contentToShare+'", "shareCustomUrl":"0", "shareLink":"", "shareDesc":""}';
+                    dataAll = '{"containerBackground":"#ffffff", "containerPadding":"0", "containerBorderType":"None", "containerBorderWidth":"0", "containerBorderColor":"#ffffff", "btnBackground":"#ffffff", "btnBorderType":"None", "btnBorderWidth":"0", "btnBorderColor":"#ffffff", "btnBorderRadius":"5", "fontTypeFace": "Arial", "fontWeight":"None", "fontSize":"12", "color":"#505050", "lineHeight":"None","align": "0", "width":"1","styleIcon":"0", "display":"0", "layout": "2", "contentToShare":"'+contentToShare+'", "shareCustomUrl":"0", "shareLink":"", "shareDesc":""}';
                     elementDrag = '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ebShareBlock">'+
                                     '<tbody class="ebShareBlockOuter">'+
                                         '<tr>'+
-                                            '<td valign="top" class="ebShareBlockInner" style="padding: 9px;">'+
+                                            '<td valign="top" class="ebShareBlockInner" style="padding: 0px;">'+
                                                 '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ebShareContent">'+
                                                     '<tbody>'+
                                                         '<tr>'+
@@ -964,11 +965,11 @@ var page = {
                     contentToShare = 0;
                     var masSocialText = ['Google','Outlook','Yahoo!'];
                     var masSocialLink = ['#','#','#'];
-                    dataAll = '{"containerBackground":"#ffffff", "containerBorderType":"None", "containerBorderWidth":"0", "containerBorderColor":"#ffffff", "btnBackground":"#ffffff", "btnBorderType":"None", "btnBorderWidth":"0", "btnBorderColor":"#ffffff", "btnBorderRadius":"5", "fontTypeFace": "Arial", "fontWeight":"None", "fontSize":"12", "color":"#505050", "lineHeight":"None","align": "0", "width":"1","styleIcon":"0", "display":"0", "layout": "2", "contentToShare":"'+contentToShare+'", "shareCustomUrl":"0", "shareLink":"", "shareDesc":""}';
+                    dataAll = '{"containerBackground":"#ffffff", "containerPadding":"0", "containerBorderType":"None", "containerBorderWidth":"0", "containerBorderColor":"#ffffff", "btnBackground":"#ffffff", "btnBorderType":"None", "btnBorderWidth":"0", "btnBorderColor":"#ffffff", "btnBorderRadius":"5", "fontTypeFace": "Arial", "fontWeight":"None", "fontSize":"12", "color":"#505050", "lineHeight":"None","align": "0", "width":"1","styleIcon":"0", "display":"0", "layout": "2", "contentToShare":"'+contentToShare+'", "shareCustomUrl":"0", "shareLink":"", "shareDesc":""}';
                     elementDrag = '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ebShareBlock">'+
                                     '<tbody class="ebShareBlockOuter">'+
                                         '<tr>'+
-                                            '<td valign="top" class="ebShareBlockInner" style="padding: 9px;">'+
+                                            '<td valign="top" class="ebShareBlockInner" style="padding: 0px;">'+
                                                 '<table border="0" cellpadding="0" cellspacing="0" width="100%" class="ebShareContent">'+
                                                     '<tbody>'+
                                                         '<tr>'+
@@ -1166,9 +1167,17 @@ var page = {
                                         '</tr>'+
                                     '</tbody>'+
                                 '</table>';
+            } else if ($item.hasClass('eb-block-column-2')){
+                type="column-2";
+                dataAll = '{"backgroundColor": "#ffffff", "borderTopType": "None", "borderTopWidth": "0", "borderTopColor": "#ffffff", "borderBottomType": "None", "borderBottomWidth": "0", "borderBottomColor": "#ffffff"}';
+                elementDrag = '<div class="template-column-2 clearfix"> <!--[if gte mso 9]> <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;"> <tr> <td align="center" valign="top" width="300" style="width:300px;"> <![endif]--> <table class="column-wrapper" align="left" border="0" cellpadding="0" cellspacing="0" width="300"> <tbody> <tr> <td class="column-container tpl-container tpl-left-column"> <div class="eb-dragenddrop-box-text"> Drop Content Blocks Here </div> <div class="tpl-block" data-type="box-text" data-json="{&quot;fontTypeFace&quot;: &quot;None&quot;, &quot;fontWeight&quot;: &quot;None&quot;, &quot;fontSize&quot;: &quot;None&quot;, &quot;boxesIs&quot;: false, &quot;boxesBackgroundColor&quot;: &quot;#ffffff&quot;, &quot;boxesBorderType&quot;: &quot;None&quot;, &quot;boxesBorderWidth&quot;: 0, &quot;boxesBorderColor&quot;: &quot;#999999&quot;, &quot;color&quot;: &quot;#333333&quot;, &quot;lineHeight&quot;: &quot;None&quot;, &quot;textAlign&quot;: &quot;None&quot;, &quot;columnSplit&quot;: 0, &quot;columnSplitType&quot;: 0}"> <div class="tpl-block-content"> <table class="ebTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"> <tbody class="ebTextBlockOuter"> <tr> <td class="ebTextBlockInner" valign="top"> <table class="ebTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="100%"> <tbody> <tr> <td class="ebTextContent" style="border: 0;padding-left:18px; padding-right: 18px; padding-top: 9px; padding-bottom: 9px;" valign="top"> <p class="eb-h2" style="margin-bottom: 15px; margin-top: 0;"> <span style="font-size: 20px; line-height: 23px; color: #333333; text-shadow: 0px 0px 0px #ffffff;">Left Column</span> </p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&acute;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div> <div class="tpl-block-controls"> <a href="#" class="et-btn-white tpl-block-code"> <i></i> <span class="tpl-tooltip-btn">Code</span> </a> <a href="#" class="et-btn-white tpl-block-clone"> <i></i> <span class="tpl-tooltip-btn">Clone</span> </a> <a href="#" class="et-btn-white tpl-block-delete"> <i></i> <span class="tpl-tooltip-btn">Delete</span> </a> </div> </div> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> <td align="center" valign="top" width="300" style="width:300px;"> <![endif]--> <table class="column-wrapper" align="right" border="0" cellpadding="0" cellspacing="0" width="300"> <tbody> <tr> <td class="column-container tpl-container tpl-right-column"> <div class="eb-dragenddrop-box-text"> Drop Content Blocks Here </div> <div class="tpl-block" data-type="box-text" data-json="{&quot;fontTypeFace&quot;: &quot;None&quot;, &quot;fontWeight&quot;: &quot;None&quot;, &quot;fontSize&quot;: &quot;None&quot;, &quot;boxesIs&quot;: false, &quot;boxesBackgroundColor&quot;: &quot;#ffffff&quot;, &quot;boxesBorderType&quot;: &quot;None&quot;, &quot;boxesBorderWidth&quot;: 0, &quot;boxesBorderColor&quot;: &quot;#999999&quot;, &quot;color&quot;: &quot;#333333&quot;, &quot;lineHeight&quot;: &quot;None&quot;, &quot;textAlign&quot;: &quot;None&quot;, &quot;columnSplit&quot;: 0, &quot;columnSplitType&quot;: 0}"> <div class="tpl-block-content"> <table class="ebTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"> <tbody class="ebTextBlockOuter"> <tr> <td class="ebTextBlockInner" valign="top"> <table class="ebTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="100%"> <tbody> <tr> <td class="ebTextContent" style="border: 0;padding-left:18px; padding-right: 18px; padding-top: 9px; padding-bottom: 9px;" valign="top"> <p class="eb-h2" style="margin-bottom: 15px; margin-top: 0;"> <span style="font-size: 20px; line-height: 23px; color: #333333; text-shadow: 0px 0px 0px #ffffff;">Right Column</span> </p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&acute;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div> <div class="tpl-block-controls"> <a href="#" class="et-btn-white tpl-block-code"> <i></i> <span class="tpl-tooltip-btn">Code</span> </a> <a href="#" class="et-btn-white tpl-block-clone"> <i></i> <span class="tpl-tooltip-btn">Clone</span> </a> <a href="#" class="et-btn-white tpl-block-delete"> <i></i> <span class="tpl-tooltip-btn">Delete</span> </a> </div> </div> </td> </tr> </tbody> </table> <!--[if gte mso 9]> </td> </tr> </table> <![endif]--> </div>';
+            } else if ($item.hasClass('eb-block-column-3')){
+                type="column-3";
+                dataAll = '{"backgroundColor": "#ffffff", "borderTopType": "None", "borderTopWidth": "0", "borderTopColor": "#ffffff", "borderBottomType": "None", "borderBottomWidth": "0", "borderBottomColor": "#ffffff"}';
+                elementDrag = '<div class="template-column-3 clearfix"><!--[if gte mso 9]><table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;"><tr><td align="center" valign="top" width="200" style="width:200px;"><![endif]--><table class="column-wrapper" align="left" border="0" cellpadding="0" cellspacing="0" width="200"><tbody><tr><td class="column-container tpl-container tpl-column-1"><div class="eb-dragenddrop-box-text">Drop Content Blocks Here</div><div class="tpl-block" data-type="box-text" data-json="{&quot;fontTypeFace&quot;: &quot;None&quot;, &quot;fontWeight&quot;: &quot;None&quot;, &quot;fontSize&quot;: &quot;None&quot;, &quot;boxesIs&quot;: false, &quot;boxesBackgroundColor&quot;: &quot;#ffffff&quot;, &quot;boxesBorderType&quot;: &quot;None&quot;, &quot;boxesBorderWidth&quot;: 0, &quot;boxesBorderColor&quot;: &quot;#999999&quot;, &quot;color&quot;: &quot;#333333&quot;, &quot;lineHeight&quot;: &quot;None&quot;, &quot;textAlign&quot;: &quot;None&quot;, &quot;columnSplit&quot;: 0, &quot;columnSplitType&quot;: 0}"><div class="tpl-block-content"><table class="ebTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="ebTextBlockOuter"><tr><td class="ebTextBlockInner" valign="top"><table class="ebTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="ebTextContent" style="border: 0;padding-left:18px; padding-right: 18px; padding-top: 9px; padding-bottom: 9px;" valign="top"><p class="eb-h2" style="margin-bottom: 15px; margin-top: 0;"><span style="font-size: 20px; line-height: 23px; color: #333333; text-shadow: 0px 0px 0px #ffffff;">Left Column</span></p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&acute;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</td></tr></tbody></table></td></tr></tbody></table></div><div class="tpl-block-controls"><a href="#" class="et-btn-white tpl-block-code"><i></i><span class="tpl-tooltip-btn">Code</span></a> <a href="#" class="et-btn-white tpl-block-clone"><i></i><span class="tpl-tooltip-btn">Clone</span></a> <a href="#" class="et-btn-white tpl-block-delete"><i></i><span class="tpl-tooltip-btn">Delete</span></a></div></div></td></tr></tbody></table><!--[if gte mso 9]></td><td align="center" valign="top" width="200" style="width:200px;"><![endif]--><table class="column-wrapper" align="left" border="0" cellpadding="0" cellspacing="0" width="200"><tbody><tr><td class="column-container tpl-container tpl-column-2"><div class="eb-dragenddrop-box-text">Drop Content Blocks Here</div><div class="tpl-block" data-type="box-text" data-json="{&quot;fontTypeFace&quot;: &quot;None&quot;, &quot;fontWeight&quot;: &quot;None&quot;, &quot;fontSize&quot;: &quot;None&quot;, &quot;boxesIs&quot;: false, &quot;boxesBackgroundColor&quot;: &quot;#ffffff&quot;, &quot;boxesBorderType&quot;: &quot;None&quot;, &quot;boxesBorderWidth&quot;: 0, &quot;boxesBorderColor&quot;: &quot;#999999&quot;, &quot;color&quot;: &quot;#333333&quot;, &quot;lineHeight&quot;: &quot;None&quot;, &quot;textAlign&quot;: &quot;None&quot;, &quot;columnSplit&quot;: 0, &quot;columnSplitType&quot;: 0}"><div class="tpl-block-content"><table class="ebTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="ebTextBlockOuter"><tr><td class="ebTextBlockInner" valign="top"><table class="ebTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="ebTextContent" style="border: 0;padding-left:18px; padding-right: 18px; padding-top: 9px; padding-bottom: 9px;" valign="top"><p class="eb-h2" style="margin-bottom: 15px; margin-top: 0;"><span style="font-size: 20px; line-height: 23px; color: #333333; text-shadow: 0px 0px 0px #ffffff;">Center Column</span></p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&acute;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</td></tr></tbody></table></td></tr></tbody></table></div><div class="tpl-block-controls"><a href="#" class="et-btn-white tpl-block-code"><i></i><span class="tpl-tooltip-btn">Code</span></a> <a href="#" class="et-btn-white tpl-block-clone"><i></i><span class="tpl-tooltip-btn">Clone</span></a> <a href="#" class="et-btn-white tpl-block-delete"><i></i><span class="tpl-tooltip-btn">Delete</span></a></div></div></td></tr></tbody></table><!--[if gte mso 9]></td><td align="center" valign="top" width="200" style="width:200px;"><![endif]--><table class="column-wrapper" align="left" border="0" cellpadding="0" cellspacing="0" width="200"><tbody><tr><td class="column-container tpl-container tpl-column-3"><div class="eb-dragenddrop-box-text">Drop Content Blocks Here</div><div class="tpl-block" data-type="box-text" data-json="{&quot;fontTypeFace&quot;: &quot;None&quot;, &quot;fontWeight&quot;: &quot;None&quot;, &quot;fontSize&quot;: &quot;None&quot;, &quot;boxesIs&quot;: false, &quot;boxesBackgroundColor&quot;: &quot;#ffffff&quot;, &quot;boxesBorderType&quot;: &quot;None&quot;, &quot;boxesBorderWidth&quot;: 0, &quot;boxesBorderColor&quot;: &quot;#999999&quot;, &quot;color&quot;: &quot;#333333&quot;, &quot;lineHeight&quot;: &quot;None&quot;, &quot;textAlign&quot;: &quot;None&quot;, &quot;columnSplit&quot;: 0, &quot;columnSplitType&quot;: 0}"><div class="tpl-block-content"><table class="ebTextBlock" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody class="ebTextBlockOuter"><tr><td class="ebTextBlockInner" valign="top"><table class="ebTextContentContainer" align="left" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="ebTextContent" style="border: 0;padding-left:18px; padding-right: 18px; padding-top: 9px; padding-bottom: 9px;" valign="top"><p class="eb-h2" style="margin-bottom: 15px; margin-top: 0;"><span style="font-size: 20px; line-height: 23px; color: #333333; text-shadow: 0px 0px 0px #ffffff;">Right Column</span></p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&acute;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</td></tr></tbody></table></td></tr></tbody></table></div><div class="tpl-block-controls"><a href="#" class="et-btn-white tpl-block-code"><i></i><span class="tpl-tooltip-btn">Code</span></a> <a href="#" class="et-btn-white tpl-block-clone"><i></i><span class="tpl-tooltip-btn">Clone</span></a> <a href="#" class="et-btn-white tpl-block-delete"><i></i><span class="tpl-tooltip-btn">Delete</span></a></div></div></td></tr></tbody></table><!--[if gte mso 9]></td></tr></table><![endif]--></div>';
             }
             
-            content =   "<div class='tpl-block tpl-selected' data-type='"+type+"' data-json='"+dataAll+"'>"+
+            content =   "<div class='tpl-block tpl-selected tpl-adding' data-type='"+type+"' data-json='"+dataAll+"'>"+
                                 '<div class="tpl-block-content">'
                                     +elementDrag+
                                 '</div>'+
@@ -1180,6 +1189,12 @@ var page = {
                             '</div>';
                     
             $(ui.item).replaceWith(content);
+
+            if ($item.hasClass('eb-block-column-2') || $item.hasClass('eb-block-column-3')){
+                page.sortableElements($('.tpl-block.tpl-adding .tpl-container'));
+            }
+
+            $('.tpl-block.tpl-adding').removeClass('tpl-adding');
             
             $('.eb-block-content.ui-draggable-dragging').remove();
             
@@ -1245,11 +1260,11 @@ var page = {
         var widthColumn_2 = 196;
 		var widthColumn_3 = 191;
         
-        if ( $tpl.parents('#template-columns').length ){
+        if ( $tpl.parents('#template-columns').length || $tpl.parents('.template-column-2').length){
             var widthColumn = 141;
             var widthColumn_1 = 180;
             var widthColumn_2 = 102;
-        } else if ( $tpl.parents('#tpl-left-sidebar').length || $tpl.parents('#tpl-right-sidebar').length || $tpl.parents('#template-columns-three').length ){
+        } else if ( $tpl.parents('#tpl-left-sidebar').length || $tpl.parents('#tpl-right-sidebar').length || $tpl.parents('#template-columns-three').length || $tpl.parents('.template-column-3').length){
             var widthColumn = 91;
             var widthColumn_1 = 106;
             var widthColumn_2 = 76;
@@ -1395,7 +1410,7 @@ var page = {
         $('#templateContainer').on('click','.tpl-block-delete', function(e){
             e.preventDefault();
             e.stopPropagation();
-            $(this).parents('.tpl-block').remove();
+            $(this).closest('.tpl-block').remove();
             $('.eb-right-panel-slide.active').removeClass('active').css({left: '589px'}).hide();
             $('.wrap-panels-el').css('z-index','-1');
             page.isElements();
@@ -1480,8 +1495,8 @@ var page = {
             tinymce.get('editor-box-text').setContent($box.find('.ebTextContent').eq(0).html());
             
             $('#numberColumnBoxText option').eq(opt.columnSplit).attr('selected', true);
-			$tpls = $('#template-columns, #template-columns-three, #tpl-right-sidebar, #tpl-left-sidebar');
-			if( $tpls.length ){
+            $tpls = $('#template-columns, #template-columns-three, #tpl-right-sidebar, #tpl-left-sidebar');
+			if( $tpls.length || $box.parents('.template-column-2').length || $box.parents('.template-column-3').length){
 				$('#numberColumnBoxText option').eq(2).attr('disabled','disabled').hide();
 			}
             $("#numberColumnBoxText").trigger('liszt:updated');
@@ -1637,6 +1652,7 @@ var page = {
             $("#containerSocialBorderType").trigger('liszt:updated');
             $('#containerSocialBorderWidth').val(opt.containerBorderWidth);
             $('#containerSocialBorderColor').colpickSetColor(opt.containerBorderColor, true).css('background-color', opt.containerBorderColor);
+            $('#containerSocialPadding').val(opt.containerPadding);
             
             $('#btnSocialBackground').colpickSetColor(opt.btnBackground, true).css('background-color', opt.btnBackground);
             $('#btnSocialBorderType option[value="'+opt.btnBorderType+'"]').attr('selected', true);
@@ -1780,6 +1796,26 @@ var page = {
             page.updateImageEdge($('#image-edge-video'));
             page.startCountImgOne();
             page.startVideoImg();
+        } else if(type == 'column-2'){
+            $('#column2Background').colpickSetColor(opt.backgroundColor, true).css('background-color', opt.backgroundColor);
+            $('#column2BorderTopType option[value="'+opt.borderTopType+'"]').attr('selected', true);
+            $("#column2BorderTopType").trigger('liszt:updated');
+            $('#column2BorderTopWidth').val(opt.borderTopWidth);
+            $('#column2BorderTopColor').colpickSetColor(opt.borderTopColor, true).css('background-color', opt.borderTopColor);
+            $('#column2BorderBottomType option[value="'+opt.borderBottomType+'"]').attr('selected', true);
+            $("#column2BorderBottomType").trigger('liszt:updated');
+            $('#column2BorderBottomWidth').val(opt.borderBottomWidth);
+            $('#column2BorderBottomColor').colpickSetColor(opt.borderBottomColor, true).css('background-color', opt.borderBottomColor);
+        } else if(type == 'column-3'){
+            $('#column3Background').colpickSetColor(opt.backgroundColor, true).css('background-color', opt.backgroundColor);
+            $('#column3BorderTopType option[value="'+opt.borderTopType+'"]').attr('selected', true);
+            $("#column3BorderTopType").trigger('liszt:updated');
+            $('#column3BorderTopWidth').val(opt.borderTopWidth);
+            $('#column3BorderTopColor').colpickSetColor(opt.borderTopColor, true).css('background-color', opt.borderTopColor);
+            $('#column3BorderBottomType option[value="'+opt.borderBottomType+'"]').attr('selected', true);
+            $("#column3BorderBottomType").trigger('liszt:updated');
+            $('#column3BorderBottomWidth').val(opt.borderBottomWidth);
+            $('#column3BorderBottomColor').colpickSetColor(opt.borderBottomColor, true).css('background-color', opt.borderBottomColor);
         }
 		if( $('.wrap-tabs-content:visible').find('.eb-editor-text').length ){
 			page.resizeTinymce();
@@ -2958,6 +2994,13 @@ var page = {
             $tpl.find('.ebShareContent').css('border-width',opt.containerBorderWidth + 'px');
             $tpl.attr('data-json', JSON.stringify( opt ));
         });
+        $('#containerSocialPadding').on('change', function () {
+            updateInfElTpl();
+            
+            opt.containerPadding = $(this).val();
+            $tpl.find('.ebShareBlockInner').css('padding',opt.containerPadding + 'px');
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
         $('#btnSocialBorderType').change(function(){
             updateInfElTpl();
             var val = $(this).val();
@@ -3966,6 +4009,80 @@ var page = {
             page.updateInlineCss('footer');
             $tpl.attr('data-json', JSON.stringify( opt ));
         });
+
+        //Columns 2-3
+        $('#column2BorderTopType').change(function(){
+            updateInfElTpl();
+            var val = $(this).val();
+            
+            opt.borderTopType = val;
+            if (val == 'None'){
+                $tpl.css('border-top-style','');
+            } else{
+                $tpl.css('border-top-style',opt.borderTopType.toLowerCase());
+            }
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column2BorderTopWidth').on('change', function () {
+            updateInfElTpl();
+            opt.borderTopWidth = $(this).val();
+            $tpl.css('border-top-width',opt.borderTopWidth + 'px');
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column2BorderBottomType').change(function(){
+            updateInfElTpl();
+            var val = $(this).val();
+            
+            opt.borderBottomType = val;
+            if (val == 'None'){
+                $tpl.css('border-bottom-style','');
+            } else{
+                $tpl.css('border-bottom-style',opt.borderBottomType.toLowerCase());
+            }
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column2BorderBottomWidth').on('change', function () {
+            updateInfElTpl();
+            opt.borderBottomWidth = $(this).val();
+            $tpl.css('border-bottom-width',opt.borderBottomWidth + 'px');
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column3BorderTopType').change(function(){
+            updateInfElTpl();
+            var val = $(this).val();
+            
+            opt.borderTopType = val;
+            if (val == 'None'){
+                $tpl.css('border-top-style','');
+            } else{
+                $tpl.css('border-top-style',opt.borderTopType.toLowerCase());
+            }
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column3BorderTopWidth').on('change', function () {
+            updateInfElTpl();
+            opt.borderTopWidth = $(this).val();
+            $tpl.css('border-top-width',opt.borderTopWidth + 'px');
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column3BorderBottomType').change(function(){
+            updateInfElTpl();
+            var val = $(this).val();
+            
+            opt.borderBottomType = val;
+            if (val == 'None'){
+                $tpl.css('border-bottom-style','');
+            } else{
+                $tpl.css('border-bottom-style',opt.borderBottomType.toLowerCase());
+            }
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
+        $('#column3BorderBottomWidth').on('change', function () {
+            updateInfElTpl();
+            opt.borderBottomWidth = $(this).val();
+            $tpl.css('border-bottom-width',opt.borderBottomWidth + 'px');
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        });
     },
     elementsClone: function($btn){
       var $block = $btn.parents('.tpl-block');
@@ -4285,6 +4402,30 @@ var page = {
             opt.linkColor = '#' + hex;
             page.updateInlineCss('footer');
             $tpl.attr('data-json', JSON.stringify( opt ));
+        } else if ( id == 'column2Background'){
+            opt.backgroundColor = '#' + hex;
+            $tpl.css('background-color', opt.backgroundColor);
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        } else if ( id == 'column2BorderTopColor'){
+            opt.borderTopColor = '#' + hex;
+            $tpl.css('border-top-color', opt.borderTopColor);
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        } else if ( id == 'column2BorderBottomColor'){
+            opt.borderBottomColor = '#' + hex;
+            $tpl.css('border-bottom-color', opt.borderBottomColor);
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        } else if ( id == 'column3Background'){
+            opt.backgroundColor = '#' + hex;
+            $tpl.css('background-color', opt.backgroundColor);
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        } else if ( id == 'column3BorderTopColor'){
+            opt.borderTopColor = '#' + hex;
+            $tpl.css('border-top-color', opt.borderTopColor);
+            $tpl.attr('data-json', JSON.stringify( opt ));
+        } else if ( id == 'column3BorderBottomColor'){
+            opt.borderBottomColor = '#' + hex;
+            $tpl.css('border-bottom-color', opt.borderBottomColor);
+            $tpl.attr('data-json', JSON.stringify( opt ));
         }
     },
     heightBodyTable: function(){
@@ -4491,10 +4632,10 @@ var page = {
         var htmlEnd = '';
         var widthColumnImg = '282px';
         
-        if ( $tpl.parents('#template-columns').length ){
+        if ( $tpl.parents('#template-columns').length || $tpl.parents('.template-column-2').length){
             widthColumnImg = '132px';
             page.updateWidthBoxUploadImage($box.find('td').find('.ebImageContent'));
-        } else if ( $tpl.parents('#tpl-left-sidebar').length || $tpl.parents('#tpl-right-sidebar').length || $tpl.parents('#template-columns-three').length ){
+        } else if ( $tpl.parents('#tpl-left-sidebar').length || $tpl.parents('#tpl-right-sidebar').length || $tpl.parents('#template-columns-three').length || $tpl.parents('.template-column-3').length ){
             widthColumnImg = '82px';
             var widthUploadImg = '62px';
         } else if ( ($tpl.parents('#template-left-sidebar').length && $tpl.parents('#tpl-body').length) || ($tpl.parents('#template-right-sidebar').length && $tpl.parents('#tpl-body').length) ){
@@ -4943,7 +5084,7 @@ var page = {
         var widthUploadImg_3 = '100%';
         
 
-        if ( $tpl.parents('#template-columns').length ){
+        if ( $tpl.parents('#template-columns').length  || $tpl.parents('.template-column-2').length){
             widthColumn_0_1 = '99px';
             widthColumn_0_2 = '192px';
             widthColumn_1_1 = '141px';
@@ -4954,7 +5095,7 @@ var page = {
             widthColumn_3_2 = '83px';
             widthUploadImg_2 = '61px';
             widthUploadImg_3 = '45px';
-        } else if ( $tpl.parents('#tpl-left-sidebar').length || $tpl.parents('#tpl-right-sidebar').length || $tpl.parents('#template-columns-three').length ){
+        } else if ( $tpl.parents('#tpl-left-sidebar').length || $tpl.parents('#tpl-right-sidebar').length || $tpl.parents('#template-columns-three').length  || $tpl.parents('.template-column-3').length){
             widthColumn_0_1 = '91px';
             widthColumn_0_2 = '100px';
             widthColumn_1_1 = '91px';
@@ -6368,6 +6509,17 @@ var page = {
 				
 				$tpl.find('.ebButtonContentContainer').css({
 					borderRadius: '3px',
+				});
+			}
+			
+		} else if ( type == 'containerSocialPadding' ){
+			
+			if ( typeTpl == 'box-social-share' || typeTpl == 'box-social-follow' || typeTpl == 'box-calendar'){
+				$('#containerSocialPadding').val('0');
+				opt.containerPadding = '0'; 
+				
+				$tpl.find('.ebShareBlockInner').css({
+					padding: '0px',
 				});
 			}
 			
